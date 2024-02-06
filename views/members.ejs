@@ -1,0 +1,15 @@
+<%- include("templates/header") %>
+<h2>Hello, <%= req.session.name %>!</h2>
+    <div class="row mb-3 text-center">
+        <!-- Display only the selected image -->
+        <div class="col-md-12 themed-grid-col">
+            <img src='<%= selectedImage %>' class="img-fluid">
+        </div>
+        <!-- Sign Out Form -->
+        <div class="text-center mt-4">
+            <form action="/logout" method="get">
+                <button type="submit" class="btn btn-secondary rounded-pill px-3">Logout</button>
+            </form>
+        </div>
+    </div>
+<%- include("templates/footer") %>
